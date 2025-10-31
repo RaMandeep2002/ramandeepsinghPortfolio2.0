@@ -58,11 +58,11 @@ const Skills = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-32 px-6 relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-slate-900 via-slate-800/50 to-slate-900" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className={`text-5xl font-bold text-center mb-6 transition-all duration-1000 ${
+        <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4 sm:mb-6 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -70,13 +70,13 @@ const Skills = () => {
           </span>
         </h2>
 
-        <p className={`text-center text-slate-400 text-lg mb-16 transition-all duration-1000 delay-100 ${
+        <p className={`text-center text-slate-400 text-base sm:text-lg mb-8 sm:mb-12 lg:mb-16 px-4 transition-all duration-1000 delay-100 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           My technical expertise across the stack
         </p>
 
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           {categories.map((category, categoryIndex) => (
             <div
               key={category}
@@ -85,25 +85,25 @@ const Skills = () => {
               }`}
               style={{ transitionDelay: `${(categoryIndex + 2) * 100}ms` }}
             >
-              <h3 className="text-2xl font-semibold text-cyan-400 mb-6 flex items-center gap-3">
+              <h3 className="text-xl sm:text-2xl font-semibold text-cyan-400 mb-4 sm:mb-6 flex items-center gap-3">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
                 {category}
               </h3>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                 {skills
                   .filter(skill => skill.category === category)
                   .map((skill, index) => (
                     <div
                       key={index}
-                      className="group bg-slate-800/30 backdrop-blur-sm p-6 rounded-xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
+                      className="group bg-slate-800/30 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
                     >
                       <div className="flex justify-between items-center mb-3">
-                        <span className="text-white font-medium text-lg">{skill.name}</span>
-                        <span className="text-cyan-400 font-semibold">{skill.proficiency}%</span>
+                        <span className="text-white font-medium text-base sm:text-lg">{skill.name}</span>
+                        <span className="text-cyan-400 font-semibold text-sm sm:text-base">{skill.proficiency}%</span>
                       </div>
 
-                      <div className="relative h-3 bg-slate-700 rounded-full overflow-hidden">
+                      <div className="relative h-2.5 sm:h-3 bg-slate-700 rounded-full overflow-hidden">
                         <div
                           className={`absolute top-0 left-0 h-full bg-linear-to-r ${getColorByProficiency(skill.proficiency)} rounded-full transition-all duration-1000 ease-out`}
                           style={{
@@ -121,11 +121,11 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className={`mt-16 text-center transition-all duration-1000 delay-700 ${
+        <div className={`mt-8 sm:mt-12 lg:mt-16 text-center transition-all duration-1000 delay-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <div className="inline-block bg-slate-800/50 backdrop-blur-sm px-8 py-4 rounded-2xl border border-slate-700">
-            <p className="text-slate-300 text-lg">
+          <div className="inline-block bg-slate-800/50 backdrop-blur-sm px-6 py-3 sm:px-8 sm:py-4 rounded-2xl border border-slate-700 mx-4">
+            <p className="text-slate-300 text-base sm:text-lg">
               Always learning and expanding my skillset with new technologies
             </p>
           </div>

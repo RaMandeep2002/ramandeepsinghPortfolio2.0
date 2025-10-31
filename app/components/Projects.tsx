@@ -49,11 +49,11 @@ const Projects = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-32 px-6 relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-slate-900 via-slate-800/50 to-slate-900" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <h2 className={`text-5xl font-bold text-center mb-16 transition-all duration-1000 ${
+        <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -61,7 +61,7 @@ const Projects = () => {
           </span>
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -73,20 +73,20 @@ const Projects = () => {
               <div className="absolute inset-0 bg-linear-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative h-full bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700 overflow-hidden group-hover:border-cyan-500/50 transition-all duration-300 transform group-hover:scale-105">
-                <div className={`h-48 bg-linear-to-br ${project.gradient} p-8 flex items-center justify-center relative overflow-hidden`}>
+                <div className={`h-40 sm:h-48 bg-linear-to-br ${project.gradient} p-6 sm:p-8 flex items-center justify-center relative overflow-hidden`}>
                   <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-4 left-4 w-32 h-32 border-2 border-white rounded-full" />
                     <div className="absolute bottom-4 right-4 w-24 h-24 border-2 border-white rounded-full" />
                   </div>
-                  <Code2 size={64} className="text-white relative z-10" />
+                  <Code2 className="w-12 h-12 sm:w-16 sm:h-16 text-white relative z-10" />
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                <div className="p-5 sm:p-6">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                     {project.title}
                   </h3>
 
-                  <p className="text-slate-300 mb-4 line-clamp-3">
+                  <p className="text-slate-300 mb-4 line-clamp-3 text-sm sm:text-base">
                     {project.description}
                   </p>
 
@@ -94,19 +94,19 @@ const Projects = () => {
                     {project.stack.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 bg-slate-700/50 border border-slate-600 rounded-full text-cyan-300 text-xs font-medium"
+                        className="px-2.5 py-1 sm:px-3 sm:py-1 bg-slate-700/50 border border-slate-600 rounded-full text-cyan-300 text-xs font-medium"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex gap-4">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
+                      className="flex items-center justify-center gap-2 px-4 py-2 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg text-white text-sm font-medium hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
                     >
                       <ExternalLink size={16} />
                       Live Demo
@@ -116,7 +116,7 @@ const Projects = () => {
                         href={project.code}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 border border-slate-600 rounded-lg text-slate-300 hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300"
+                        className="flex items-center justify-center gap-2 px-4 py-2 border border-slate-600 rounded-lg text-slate-300 text-sm hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300"
                       >
                         <Github size={16} />
                         Code

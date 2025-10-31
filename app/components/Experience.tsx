@@ -64,7 +64,7 @@ const Experience = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-32 px-6 relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-slate-900 via-slate-800/30 to-slate-900" />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
@@ -83,7 +83,7 @@ const Experience = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <h2
-          className={`text-5xl font-bold text-center mb-16 transition-all duration-1000 ${
+          className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -93,12 +93,12 @@ const Experience = () => {
         </h2>
 
         <div className="relative">
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-cyan-500 via-purple-500 to-cyan-500" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-cyan-500 via-purple-500 to-cyan-500" />
 
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`relative mb-12 transition-all duration-1000 ${
+              className={`relative mb-8 sm:mb-12 transition-all duration-1000 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
@@ -108,42 +108,42 @@ const Experience = () => {
               <div
                 className={`md:flex ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } gap-8`}
+                } gap-6 lg:gap-8`}
               >
                 <div
                   className={`md:w-1/2 ${
-                    index % 2 === 0 ? "md:text-right" : "md:text-left"
+                    index % 2 === 0 ? "md:text-right md:pr-4 lg:pr-8" : "md:text-left md:pl-4 lg:pl-8"
                   }`}
                 >
                   <div className="group relative">
                     <div className="absolute inset-0 bg-linear-to-r from-cyan-500/20 to-purple-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="relative bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700 group-hover:border-cyan-500/50 transition-all duration-300">
-                      <div className="flex items-center gap-3 mb-4">
+                    <div className="relative bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-slate-700 group-hover:border-cyan-500/50 transition-all duration-300">
+                      <div className={`flex items-center gap-3 mb-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
                         <div className="p-2 bg-linear-to-br from-cyan-500 to-purple-600 rounded-lg">
                           <Briefcase className="text-white" size={20} />
                         </div>
                         <div className="flex flex-col">
-                          <h3 className="text-2xl font-semibold text-white mb-1 tracking-tight">
+                          <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-1 tracking-tight">
                             {exp.role}
                           </h3>
-                          <span className="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-sm font-medium rounded-full w-fit">
+                          <span className="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs sm:text-sm font-medium rounded-full w-fit">
                             {exp.company}
                           </span>
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-2 text-slate-400 mb-4">
+                      <div className={`flex items-center gap-2 text-slate-400 mb-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
                         <Calendar size={16} />
-                        <span>{exp.period}</span>
+                        <span className="text-sm sm:text-base">{exp.period}</span>
                       </div>
 
-                      <ul className="space-y-3 mt-3">
+                      <ul className="space-y-2 sm:space-y-3 mt-3">
                         {exp.achievements.map((achievement, i) => (
                           <li
                             key={i}
                             className="flex items-start gap-3 group"
                           >
-                            <span className="text-slate-300 px-4 py-2 rounded-lg shadow-md border border-cyan-500/10 group-hover:border-purple-400/40 transition-all duration-300">
+                            <span className="text-slate-300 text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow-md border border-cyan-500/10 group-hover:border-purple-400/40 transition-all duration-300">
                               {achievement}
                             </span>
                           </li>

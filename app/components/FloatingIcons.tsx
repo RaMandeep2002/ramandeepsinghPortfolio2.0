@@ -111,25 +111,25 @@ const FloatingIcons = () => {
 //   );
 
   const icons = [
-    { Icon: Code2, delay: "0s", position: "top-20 left-20", duration: "20s" },
+    { Icon: Code2, delay: "0s", position: "top-20 left-10 sm:left-20", duration: "20s" },
     {
       Icon: Database,
       delay: "2s",
-      position: "top-40 right-32",
+      position: "top-40 right-8 sm:right-32",
       duration: "25s",
     },
     {
       Icon: Layers,
       delay: "4s",
-      position: "bottom-40 left-32",
+      position: "bottom-40 left-10 sm:left-32",
       duration: "22s",
     },
-    { Icon: Zap, delay: "1s", position: "bottom-20 right-20", duration: "18s" },
-    { Icon: Globe, delay: "3s", position: "top-1/3 right-20", duration: "24s" },
+    { Icon: Zap, delay: "1s", position: "bottom-20 right-10 sm:right-20", duration: "18s" },
+    { Icon: Globe, delay: "3s", position: "top-1/3 right-10 sm:right-20", duration: "24s" },
     {
       Icon: Terminal,
       delay: "5s",
-      position: "bottom-1/3 left-20",
+      position: "bottom-1/3 left-10 sm:left-20",
       duration: "21s",
     },
     {
@@ -160,7 +160,7 @@ const FloatingIcons = () => {
     {
       Icon: TsIcon,
       delay: "4s",
-      position: "bottom-1/4 right-14",
+      position: "bottom-1/4 right-8 sm:right-14",
       duration: "21s",
     },
     // {
@@ -176,7 +176,7 @@ const FloatingIcons = () => {
       {icons.map(({ Icon, delay, position, duration }, index) => (
         <div
           key={index}
-          className={`absolute ${position} opacity-20`}
+          className={`absolute ${position} opacity-10 sm:opacity-20 hidden sm:block`}
           style={{
             animation: `float ${duration} ease-in-out infinite, rotate 30s linear infinite`,
             animationDelay: delay,
