@@ -4,9 +4,20 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const Experience = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [starPositions, setStarPositions] = useState<Array<{top: string, left: string, delay: string, opacity: number}>>([]);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    // Generate random positions only on client side to avoid hydration mismatch
+    setStarPositions(
+      Array.from({ length: 20 }, () => ({
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`,
+        delay: `${Math.random() * 3}s`,
+        opacity: Math.random() * 0.5,
+      }))
+    );
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -67,15 +78,15 @@ const Experience = () => {
     <section ref={sectionRef} className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-slate-900 via-slate-800/30 to-slate-900" />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {starPositions.map((star, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              opacity: Math.random() * 0.5,
+              top: star.top,
+              left: star.left,
+              animationDelay: star.delay,
+              opacity: star.opacity,
             }}
           />
         ))}

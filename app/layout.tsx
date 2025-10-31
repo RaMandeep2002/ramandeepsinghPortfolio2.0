@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -15,11 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ramandeep Singh - Full Stack Developer Portfolio",
   description: "Portfolio of Ramandeep Singh, a Full Stack Developer skilled in React, Next.js, TypeScript, Node.js, and Blockchain technologies.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({

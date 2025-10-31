@@ -4,9 +4,20 @@ import { Code, Sparkles, Rocket } from "lucide-react";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [starPositions, setStarPositions] = useState<Array<{top: string, left: string, delay: string, opacity: number}>>([]);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    // Generate random positions only on client side to avoid hydration mismatch
+    setStarPositions(
+      Array.from({ length: 20 }, () => ({
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`,
+        delay: `${Math.random() * 3}s`,
+        opacity: Math.random() * 0.5,
+      }))
+    );
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -28,15 +39,15 @@ const About = () => {
       <div className="absolute inset-0 bg-linear-to-b from-slate-900 via-slate-800/50 to-slate-900" />
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {starPositions.map((star, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              opacity: Math.random() * 0.5,
+              top: star.top,
+              left: star.left,
+              animationDelay: star.delay,
+              opacity: star.opacity,
             }}
           />
         ))}
