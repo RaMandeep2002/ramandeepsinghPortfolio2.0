@@ -86,18 +86,18 @@ const About = () => {
                 </p> */}
                 <div className="flex flex-wrap gap-2 sm:gap-3">
                   {[
-                    "React",
-                    "Next.js",
+                    "HTML5",
+                    "CSS3",
                     "JavaScript",
                     "TypeScript",
                     "Node.js",
                     "Express.js",
+                    "React",
+                    "Next.js",
                     "MongoDB",
                     "Redux",
                     "Tailwind CSS",
                     "Styled Components",
-                    "HTML5",
-                    "CSS3",
                     "Docker",
                     "Git",
                     "GitHub Actions",
