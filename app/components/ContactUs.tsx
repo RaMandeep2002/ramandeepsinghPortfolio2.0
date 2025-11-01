@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 relative overflow-hidden">
+    <section id="Contact" ref={sectionRef} className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-slate-900 via-slate-800/30 to-slate-900" />
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -123,9 +123,9 @@ const Contact = () => {
                 <p className="text-slate-400 mb-3 sm:mb-4 text-sm sm:text-base">Follow me on social media</p>
                 <div className="flex gap-3 sm:gap-4">
                   {[
-                    { icon: Github, href: '#', color: 'hover:bg-cyan-500' },
-                    { icon: Linkedin, href: '#', color: 'hover:bg-blue-500' },
-                    { icon: Mail, href: '#', color: 'hover:bg-purple-500' }
+                    { icon: Github, href: "https://github.com/RaMandeep2002", color: "hover:text-cyan-400" },
+                    { icon: Linkedin, href: "https://www.linkedin.com/in/ramandeep-singh-849a121bb/", color: "hover:text-blue-400" },
+                    { icon: Mail, href: "mailto:ramandeepsingh1511@gmail.com", color: "hover:text-purple-400" },
                   ].map(({ icon: Icon, href, color }, index) => (
                     <a
                       key={index}

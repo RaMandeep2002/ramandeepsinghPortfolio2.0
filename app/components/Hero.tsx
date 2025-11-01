@@ -2,6 +2,7 @@
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 import FloatingIcons from "./FloatingIcons";
+import Link from "next/link";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,6 +49,7 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-wrap gap-3 sm:gap-4 justify-center mb-8 sm:mb-10 px-4">
+          <a href="https://drive.google.com/file/d/1XmtEJagYF2_obzggc087kv2ySSqe9VPG/view?usp=sharing">
           <button className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50">
             <span className="relative z-10 flex items-center gap-2 text-white text-sm sm:text-base font-semibold">
               <Download className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -55,13 +57,15 @@ export default function Hero() {
             </span>
             <div className="absolute inset-0 bg-linear-to-r from-cyan-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
-
-          <button className="group relative px-6 py-3 sm:px-8 sm:py-4 border-2 border-purple-500 rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50">
-            <span className="relative z-10 text-purple-400 group-hover:text-white text-sm sm:text-base font-semibold transition-colors duration-300">
-              Hire Me
-            </span>
-            <div className="absolute inset-0 bg-linear-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </button>
+          </a>
+          <Link href="#Contact">
+            <button className="group relative px-6 py-3 sm:px-8 sm:py-4 border-2 border-purple-500 rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50">
+              <span className="relative z-10 text-purple-400 group-hover:text-white text-sm sm:text-base font-semibold transition-colors duration-300">
+                Hire Me
+              </span>
+              <div className="absolute inset-0 bg-linear-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </button>
+          </Link>
         </div>
 
         <div className="flex gap-4 sm:gap-6 justify-center">
