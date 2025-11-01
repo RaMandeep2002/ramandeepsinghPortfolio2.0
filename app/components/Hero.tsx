@@ -28,7 +28,11 @@ export default function Hero() {
             <div className="relative w-32 h-32 sm:w-48 sm:h-48 mx-auto rounded-full bg-linear-to-br from-cyan-500 to-purple-600 p-1">
               <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
                 <div className="w-full h-full rounded-full bg-linear-to-br from-cyan-400 to-purple-500 flex items-center justify-center text-3xl sm:text-6xl font-bold text-white">
-                  RS
+                  <img
+                    src="https://i.postimg.cc/jj0My2Cr/20230602-092726-01-1.jpg"
+                    alt="Ramandeep Singh"
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
               </div>
             </div>
