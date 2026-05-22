@@ -34,18 +34,28 @@ const Projects = () => {
     },
     {
       title: 'Salmon Arm Taxi',
-      description: 'For this project, I created the frontend for both the website and the admin panel to manage operations. I also developed APIs using Node.js (TypeScript) and integrated them with Redux Toolkit for state management. Additionally, we provided APIs to the app developer to enable features such as starting and stopping shifts, as well as starting and ending rides, ensuring seamless integration between the admin panel and the driver app.',
-      stack: ['TypeScript', 'React', 'Redux Toolkit', 'Node.js', 'MongoDB', 'APIs'],
+      description: 'Built a full-stack taxi management system with real-time ride tracking, fare calculation, admin control, and APIs for the driver app to start and end shifts and rides.',
+      stack: ['Next.js', 'TypeScript', 'Redux Toolkit', 'Node.js', 'MongoDB', 'APIs'],
       gradient: 'from-purple-500 to-pink-600',
       link: 'https://salmonarmtaxi.ca/',
       code: "https://github.com/RaMandeep2002/salmon_taxi_frontend.git" // Not open source
     },
-    // {
-    //   title: 'AI Content Generator',
-    //   description: 'AI-powered content creation platform that generates blog posts, social media content, and marketing copy.',
-    //   stack: ['Next.js', 'OpenAI', 'Tailwind', 'Supabase'],
-    //   gradient: 'from-emerald-500 to-teal-600'
-    // },
+    {
+      title: 'AI-Powered QR Review',
+      description: 'Created a QR-based customer review platform with AI-generated review assistance and a flow for posting reviews on Google Business.',
+      stack: ['Next.js', 'OpenAI API', 'Tailwind CSS', 'Google Business'],
+      gradient: 'from-emerald-500 to-teal-600',
+      link: 'https://www.qreview.in/',
+      code: "https://github.com/RaMandeep2002/RevQR_AI"
+    },
+    {
+      title: 'Gurbani Seva',
+      description: 'Developed a mobile reading application for Guru Granth Sahib and Dasam Granth with customizable text size, font styles, and personalized reading features.',
+      stack: ['React', 'Capacitor', 'Mobile App', 'Accessibility'],
+      gradient: 'from-amber-500 to-rose-600',
+      link: 'https://gurbani-app-omega.vercel.app/',
+      code: "https://github.com/RaMandeep2002/gurbani-app"
+    },
   ];
 
   return (

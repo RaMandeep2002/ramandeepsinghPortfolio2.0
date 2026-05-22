@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Code, Sparkles, Rocket } from "lucide-react";
+import { Code, GraduationCap, Rocket } from "lucide-react";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,7 +77,12 @@ const About = () => {
               <div className="absolute inset-0 bg-linear-to-r from-cyan-500/20 to-purple-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700">
                 <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-6">
-                Aspiring Full Stack and Blockchain Developer skilled in HTML, CSS, Bootstrap, and React.js. Passionate about building responsive UIs, dynamic web apps, and decentralized solutions. Eager to learn and innovate, applying both front-end and back-end expertise to deliver efficient, high-quality projects in collaboration with cross-functional teams.
+                  Full-stack developer with hands-on experience in HTML, CSS,
+                  JavaScript, React.js, Next.js, Bootstrap, Tailwind CSS,
+                  Node.js, Express.js, MongoDB, TypeScript, Redux, and Redux
+                  Toolkit. Skilled in building responsive, dynamic web
+                  applications with end-to-end proficiency across front-end and
+                  back-end development.
                 </p>
                 {/* <p className="text-slate-300 text-lg leading-relaxed mb-6">
                   My journey in tech started with a curiosity for how things
@@ -90,19 +95,25 @@ const About = () => {
                     "CSS3",
                     "JavaScript",
                     "TypeScript",
-                    "Node.js",
-                    "Express.js",
                     "React",
                     "Next.js",
+                    "Bootstrap",
+                    "Tailwind CSS",
+                    "Node.js",
+                    "Express.js",
                     "MongoDB",
                     "Redux",
-                    "Tailwind CSS",
-                    "Styled Components",
+                    "Redux Toolkit",
+                    "WordPress",
+                    "Elementor",
+                    "Supabase",
+                    "Framer Motion",
+                    "Capacitor",
+                    "Clerk",
+                    "PostgreSQL",
                     "Docker",
                     "Git",
-                    "GitHub Actions",
                     "Vercel",
-                    "Rest API",
                     "Figma",
                   ].map((skill, index) => (
                     <span
@@ -129,18 +140,18 @@ const About = () => {
               {[
                 {
                   icon: Code,
-                  title: "Clean Code",
-                  desc: "Writing maintainable and scalable code",
+                  title: "End-to-End Builds",
+                  desc: "Creating responsive front ends, APIs, dashboards, and admin workflows",
                 },
                 {
-                  icon: Sparkles,
-                  title: "Creative Solutions",
-                  desc: "Innovative approaches to challenges",
+                  icon: GraduationCap,
+                  title: "Education",
+                  desc: "BCA graduate and MCA distance education student at Chandigarh University",
                 },
                 {
                   icon: Rocket,
-                  title: "Fast Delivery",
-                  desc: "Efficient project execution",
+                  title: "Current Focus",
+                  desc: "Full Stack Developer at G Design Studio, building web, WordPress, and mobile products",
                 },
               ].map(({ icon: Icon, title, desc }, index) => (
                 <div

@@ -38,7 +38,7 @@ const Experience = () => {
     {
       role: "Mern Stack Student",
       company: "Solitaire Infosys",
-      period: "2022 - 2022",
+      period: "6-week internship",
       achievements: [
         "Completed hands-on training in the MERN stack, including MongoDB, Express.js, React, and Node.js.",
         "Developed and deployed multiple CRUD web applications independently.",
@@ -50,26 +50,33 @@ const Experience = () => {
     {
       role: "Blockchain Student",
       company: "ASB (Antier School of BlockTech)",
-      period: "2023 - 2023",
+      period: "June 2023 - November 2023",
       achievements: [
         "Completed comprehensive training in blockchain fundamentals and smart contract development using Solidity.",
-        "Built and tested smart contracts using Hardhat and Mocha in development projects.",
-        "Worked on decentralized application (dApp) prototypes with hands-on experience in JavaScript, Node.js, and web3 concepts.",
-        "Collaborated in a team to design token systems and implement contract logic.",
-        "Developed problem-solving and debugging skills within the blockchain development life-cycle.",
+        "Developed contracts across ERC20, ERC721, and staking standards.",
+        "Created a car renting contract using non-fungible tokens to support secure and transparent rental transactions.",
+        "Designed and executed smart contract test cases with Hardhat and OpenZeppelin ERC20 test tooling.",
       ],
     },
     {
       role: "Blockchain Developer",
       company: "Virtual IT Technology",
-      period: "2023 - 2024",
+      period: "November 2023 - April 2024",
       achievements: [
-        "Developed and deployed blockchain solutions, including writing smart contracts in Solidity for enterprise clients.",
-        "Collaborated with cross-functional teams to integrate blockchain features with full-stack applications.",
-        "Used Hardhat and Mocha to test and optimize smart contracts for security and efficiency.",
-        "Implemented APIs and backend logic in Node.js to enable decentralized features.",
-        "Helped troubleshoot and debug blockchain-based platforms through full development lifecycle.",
-        "Wrote documentation and technical specifications for blockchain projects.",
+        "Developed and implemented NFT smart contracts and a frontend for creating and buying NFTs.",
+        "Deployed ERC20 token sale contracts and token transfer contracts for wallet-pair transactions.",
+        "Created project documentation for token sales, Crypto CiBil, and food tracing supply chain projects.",
+        "Designed flow diagrams for client products and collaborated with the social media marketing team.",
+      ],
+    },
+    {
+      role: "Full Stack Developer",
+      company: "G Design Studio",
+      period: "May 2024 - Current",
+      achievements: [
+        "Built an AI-powered QR review platform that helps customers create AI-assisted reviews and publish them on Google Business.",
+        "Customized the Elessi WooCommerce theme and configured complete e-commerce functionality, including variable products, custom tabs, and optimized store setup.",
+        "Developed Gurbani Seva, a mobile application integrating Guru Granth Sahib and Dasam Granth with customizable text size, font styles, and personalized reading features.",
       ],
     },
   ];

@@ -40,16 +40,17 @@ export default function Hero() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-3 sm:mb-4 bg-linear-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent animate-gradient">
-          Ramandeep singh
+          Ramandeep Singh
         </h1>
 
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-cyan-300 mb-4 sm:mb-6 font-light tracking-wide">
-          Full Stack Developer
+          Full-Stack Development
         </h2>
 
         <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
-          Blending creativity and code to build modern digital solutions.
-          Driven by a passion for seamless user experiences and robust, scalable systems.
+          Full-stack developer building responsive web applications with React,
+          Next.js, Node.js, Express.js, MongoDB, TypeScript, Redux Toolkit, and
+          modern UI tools.
         </p>
 
         <div className="flex flex-wrap gap-3 sm:gap-4 justify-center mb-8 sm:mb-10 px-4">

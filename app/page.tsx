@@ -1,5 +1,7 @@
 import About from "./components/AboutUs";
+import Certifications from "./components/Certifications";
 import Contact from "./components/ContactUs";
+import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -12,9 +14,11 @@ export default function Home() {
       {/* <Navbar /> */}
       <Hero />
       <About />
+      <Education />
       <Skills />
       <Experience />
       <Projects />
+      <Certifications />
       <Contact />
     </div>
   );
