@@ -54,7 +54,7 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-wrap gap-3 sm:gap-4 justify-center mb-8 sm:mb-10 px-4">
-          <a href="https://drive.google.com/file/d/1XmtEJagYF2_obzggc087kv2ySSqe9VPG/view?usp=sharing">
+          <a href="https://drive.google.com/file/d/1Ne6jzwfKfWNzrbUlIE7X_1-7nt5Nw2W9/view?usp=sharing">
           <button className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50">
             <span className="relative z-10 flex items-center gap-2 text-white text-sm sm:text-base font-semibold">
               <Download className="w-4 h-4 sm:w-5 sm:h-5" />
